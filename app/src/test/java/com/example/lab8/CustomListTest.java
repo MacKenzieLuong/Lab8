@@ -79,7 +79,7 @@ public class CustomListTest {
         list = MockCityList();
         assertEquals(0, list.countCities());
         City city = new City("Yellowknife", "Northwest Territories");
-        list.add(city);
+        list.addCity(city);
         assertEquals(1, list.countCities());
         list.delete(city);
         assertEquals(list.getCities().size(),list.countCities());
