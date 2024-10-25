@@ -45,7 +45,7 @@ public class CustomListTest {
 // This line checks if the city is in the list. As the list is empty is should return false
         assertEquals(Boolean.FALSE, list.hasCity(city));
 //We now add the city
-        list.add(city);
+        list.addCity(city);
 // hasCity should return true now
         assertEquals(Boolean.TRUE, list.hasCity(city));
     }

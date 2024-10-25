@@ -71,8 +71,20 @@ public class CustomList extends ArrayAdapter<City> {
         List<City> list = cities;
         return list;
     }
+    /**
+     * This deletes a city to the list if the city exists
+     * @param city
+     * This is a candidate city to delete
+     */
+    public Boolean hasCity(City city) {
+        if (cities.contains(city)) {
+            return Boolean.TRUE;
+        } else{
+            return Boolean.FALSE;
 
-    
+        }
+    }
+
 
 
 }
