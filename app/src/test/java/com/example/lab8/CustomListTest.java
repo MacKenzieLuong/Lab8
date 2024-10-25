@@ -41,16 +41,13 @@ public class CustomListTest {
     @Test
     public void hasCityTest(){
         list = MockCityList();
-// This line checks if the first city in the cityList (retrieved by cityList.getCities().get(0))
-// is the same as the city returned by mockCity()
-        assertEquals(0, MockCityList().compareTo(list.getCities().get(0)));
-// This pushes down the original city
         City city = new City("Charlottetown", "Prince Edward Island");
+// This line checks if the city is in the list. As the list is empty is should return false
+        assertEquals(Boolean.FALSE, list.hasCity(city));
+//We now add the city
         list.add(city);
-// Now the original city should be at position 1
-        assertEquals(0, city.compareTo(list.getCities().get(0)));
-        assertEquals(0, MockCityList().compareTo(list.getCities().get(1)));
-    }
+// hasCity should return true now
+        assertEquals(Boolean.TRUE, list.hasCity(city));
     }
 
 
