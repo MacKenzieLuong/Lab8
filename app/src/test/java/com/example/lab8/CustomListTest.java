@@ -68,6 +68,24 @@ public class CustomListTest {
         assertFalse(list.getCities().contains(extraCity));
     }
 
+    /**
+     * create list
+     * check number is zero
+     * add city
+     * check if number is one (increased by oen)
+     * */
+    @Test
+    void testCountCities(){
+        list = MockCityList();
+        assertEquals(0, list.countCities());
+        City city = new City("Yellowknife", "Northwest Territories");
+        list.add(city);
+        assertEquals(1, list.countCities());
+        list.delete(city);
+        assertEquals(list.getCities().size(),list.countCities());
+
+    }
+
 
 
 
